@@ -191,3 +191,88 @@ body{
     display: flex;
     flex-flow: wrap;
 }
+
+/* About.html css */
+.about-data{
+    width: 90%;
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 3%;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+}
+.developer-profile{
+    width: 50%;
+}
+.developer-profile h1{
+    width: 45%;
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: rgb(250, 6, 6);
+    border-left: 3px solid rgb(109, 24, 24);
+    border-top: 1px solid rgb(109, 24, 24);
+    padding-left: 10px;
+    letter-spacing: 16px;
+}
+.last-strok{
+    width: 70%;
+    border-right: 3px solid rgb(109, 24, 24);
+    border-bottom: 1px solid rgb(109, 24, 24);
+}
+.developer-profile img{
+    width: 50%;
+    border-radius: 50%;
+}
+.developer-profile .developer-details{
+    width: 70%;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgb(73, 71, 71);
+}
+.detailed-elaboration{
+    width: 40%;
+}
+.detailed-elaboration h4{
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    font-size: 36px;
+    border-bottom: 2px solid orange;
+    color: rgb(78, 78, 78);
+    letter-spacing: 5px;
+}
+.detailed-elaboration p{
+    color: rgb(0, 1, 2);
+    letter-spacing: 2px;
+    line-height: 25px;
+}
+.brief-contact{
+    margin-top: 20px;
+    font-size: 18px;
+    color: rgb(9, 113, 182);
+    line-height: 25px;
+    
+}
+.brief-contact h5{
+    width: fit-content;
+    border-top: 1px solid rgb(250, 6, 6);
+}
+.brief-contact h6{
+    width: fit-content;
+    border-bottom: 1px solid rgb(250, 6, 6);
+}
+footer{
+    background-color: black;
+}
+.footer-content{
+    width: 60%;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
