@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Shop</title>
+    <link rel="stylesheet" href="./css/base.css">
+</head>
+<body>
+    <!--------Special Thanks popup------>
+    <div class="popup center">
+        <div class="icon">
+            <!----handshake icon-->
+            <img src="/img/Black_Headphones.jfif" alt="">
+        </div>
+        <div class="title">
+            Thank You !!!
+        </div>
+        <div class="description">
+            Thanks so much for shopping with us, we appriciate your trust in as 
+            and we promise to make all the necesary efforts to ensure we deliver 
+            reliable and trustworthy services to you. you can tag along a friend 
+            next time you are shoping with us. Thank you!!!!!!!!
+        </div>
+        <div class="dismiss-btn">
+            <button id="dismiss-popup-btn">
+                cancel
+            </button>
+        </div>
+    </div>
+    <!---Nav Content--->
+    <div class="nav_content">
+        <div class="navigation_bar">
+            <div class="nav_logo">
+                <h1><a href="#">G-Shop</a></h1>
+            </div>
+            <div class="nav_search">
+                <input type="search" name="" id="" placeholder="Search Item here">
+            </div>
+            <ul class="access_links">
+                <li class="access_link">
+                    <a href="home.html">Home</a>
+                </li>
+                <li class="access_link">
+                    <a href="#" onclick="openPopup()">Cart</a>
+                </li>
+                <li class="access_link">
+                    <a href="#" onclick="openAbout()">About</a>
+                </li>
+                <li class="access_link">
+                    <a href="#">Help</a>
+                </li>
+            </ul>
+        </div>
+        <!-------cart---------->
+        <div class="my-cart" id="popup">
+            <div class="cart-body-content">
+                <h1>Your shopping cart</h1>
+                <table class="cart2">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Name</th>
+                            <th>Quantity</th>
+                            <th>Unit Price</th>
+                            <th>Total Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="#">
+                                    <img src="/img/Camera2.jpg">
+                                </a>
+                            </td>
+                            <td>
+                                Camera
+                                <form action="" method="post">
+                                    <input type="submit" value="Remove">
+                                </form>
+                            </td>
+                            <td class="se">
+                                <select name="quantity" id="">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                <input type="submit" value="Update">
+                            </td>
+                            <td>Ksh 20000</td>
+                            <td>Ksh 20000</td>
+                        </tr>
+                        <tr class="total">
+                            <td>Total Amount</td>
+                            <td colspan="3"></td>
+                            <td class="num">Ksh.20000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-right">
+                    <p class="buttonlight" onclick="closePopup()">Cancel</p>
+                    <p id="car-li" class="button" onclick="openPurchase()">Make Purchase</p>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <!------Make purchase--------->
+    <div class="make-purchase" id="mypurchase">
+        <div class="close-btn2" onclick="closePurchase()">&times;</div>
+        <div class="customer-form">
+            <div class="customer-details">
+                <form action="" method="post">
+                    <div class="pur-inp">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="cus-name" placeholder="two Names">
+                    </div>
+                    <div class="pur-inp">
+                        <label for="mail">Email:</label>
+                        <input type="email" name="mail" id="cus-mail" placeholder="your email i.e xyz@gmail.com">
+                    </div>
+                    <div class="pur-inp">
+                        <label for="telno">Phone No:</label>
+                        <input type="tel" name="telno" id="cusno" placeholder="0712345678">
+                    </div>
+                    <div class="pur-inp">
+                        <label for="pymthd">Choose Payment Method:</label>
+                        <select name="pymthd" id="paym">
+                            <option value="">Mpesa</option>
+                            <option value="">Airtel Money</option>
+                            <option value="">Bank</option>
+                        </select>
+                    </div>
+                    <input id="open-thankyou" class="pur-btn" type="" value="submit">
+                </form>
+            </div>
+            <div class="purchase-overview">
+                <div class="pur-sum">
+                    <h5>Date: <span>20/10/2022</span></h5>
+                    <h5>Time: <span>4:24 Pm</span></h5>
+                    <h5>Total Items Purchased: <span>24</span> Items </h5>
+                    <h5>Total Amount to be paid: <span>Ksh. 20000</span></h5>
+                </div>
+                <div class="purch-items">
+                    <h4>Items Purchased</h4>
+                    <div class="itms">
+                        <ul>
+                            <li>Camera</li>
+                            <li>Camera</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---Main Body--->
+    <div class="main_body" id="mainid">
+        <div class="main_side_bar">
+            <h1 class="order_by">
+                Order Items By
+            </h1>
+            <div class="orderby_contents">
+                <ul>
+                    <!---Alphabetical listing--->
+                    <li class="order_by_list">
+                        <select name="name" id="">
+                            <option value="">A-Z</option>
+                            <option value="">Z-A</option>
+                        </select>
+                    </li>
+                    <!---Listing by prices--->
+                    <li class="order_by_list">
+                        <select name="name" id="">
+                            <option value="">Bellow 500</option>
+                            <option value="">Bellow 1000</option>
+                            <option value="">Bellow 3000</option>
+                            <option value="">Bellow 5000</option>
+                            <option value="">Bellow 20000</option>
+                            <option value="">Bellow 50000</option>
+                            <option value="">Bellow 100000</option>
+                            <option value="">100000 and above</option>
+                        </select>
+                    </li>
+                    <!---Listing by time on stock--->
+                    <li class="order_by_list">
+                        <select name="" id="">
+                            <option value="">New Stock - Old Stock</option>
+                            <option value="">Old Stock - New Stock</option>
+                        </select>
+                    </li>
+                    <!----Listing by Fashion--->
+                    <li class="order_by_list">
+                        <select name="" id="">
+                            <option value="">New Fashion - Old Fashion</option>
+                            <option value="">Old Fashion - New Fashion</option>
+                        </select>
+                    </li>
+                    <!---Listing by Ratings--->
+                    <li class="order_by_list">
+                        <select name="" id="">
+                            <option value="">Highly Rated - Lowly Rated</option>
+                            <option value="">Lowly rated - Highly Rated</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!---Main Body Content-->
+        <div class="main_body_content">
+            <div class="category_shortcut">
+                <div class="chosing_category">
+                    <h3>Choose Category</h3>
+                    <div class="category_search_content">
+                        <div class="category_search">
+                            <input type="search" name="" id="" placeholder="search category here">
+                        </div>
+                        <div class="category_dropdown">
+                            <select name="" id="">
+                                <option value="">All Categories</option>
+                                <option value="">Electronics</option>
+                                <option value="">Accesories</option>
+                                <option value="">Suitcases</option>
+                                <option value="">Jewelries</option>
+                                <option value="">Clothes</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="subscription">
+                    <h2 onclick="openSubpop()">Subscribe</h2>
+                </div>
+                <div class="subscription-details" id="subpPop">
+                    <div class="close-btn" onclick="closeSubpop()">&times;</div>
+                    <div class="subscription-form">
+                        <form action="" method="post">
+                            <input type="email" name="mail" id="customer-mail" placeholder="Enter your email">
+                            <input type="text" name="name" id="customer-name" placeholder="Enter your name">
+                            <div class="update-confirmation">
+                                <input type="checkbox" name="upadte" id="uptade-conf" checked>
+                                <p>I wis to recieve updates on lates products</p>
+                            </div>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="mainp" class="main_products">
+                <div id="products_data" class="products_data">
+                    <p onclick="openSdpopup()">See Details</p>
+                    <img src="./img/camera3.jpeg" alt="">
+                    <div class="product_details">
+                        <h2>Camera</h2>
+                        <h4>Ksh 15000</h4>
+                        <h5 onclick="openPopup()">Add To Cart</h5>
+                    </div>
+                </div>
+                <div id="products_data" class="products_data">
+                    <p>See Details</p>
+                    <img src="./img/Earphone1.png" alt="">
+                    <div class="product_details">
+                        <h2>Earphones</h2>
+                        <h4>Ksh 500</h4>
+                        <h5 onclick="openPopup()">Add To Cart</h5>
+                    </div>
+                </div>
+                <div id="products_data" class="products_data">
+                    <p>See Details</p>
+                    <img src="./img/Jeadphone3.jpeg" alt="">
+                    <div class="product_details">
+                        <h2>Headphone</h2>
+                        <h4>Ksh 800</h4>
+                        <h5 onclick="openPopup()">Add To Cart</h5>
+                    </div>
+                </div>
+                <div id="products_data" class="products_data">
+                    <p>See Details</p>
+                    <img src="./img/hoofer1.jpeg" alt="">
+                    <div class="product_details">
+                        <h2>Woofer</h2>
+                        <h4>Ksh 4000</h4>
+                        <h5 onclick="openPopup()">Add To Cart</h5>
+                    </div>
+
+                </div>
+                <div id="products_data" class="products_data">
+                    <p onclick="openSdpopup()">See Details</p>
+                    <img src="./img/laptop1.png" alt="">
+                    <div class="product_details">
+                        <h2>Laptop</h2>
+                        <h4>Ksh 25000</h4>
+                        <h5 onclick="openPopup()">Add To Cart</h5>
+                    </div>
+                </div>
+                <div id="products_data" class="products_data">
+                    <p>See Details</p>
+                    <img src="./img/watch1.jpeg" alt="">
+                    <div class="product_details">
+                        <h2>Wrist Watch</h2>
+                        <h4>Ksh 1000</h4>
+                        <h5 onclick="openPopup()">Add To Cart</h5>
+                    </div>
+                </div>
+                <div id="products_data" class="products_data">
+                    <p>See Details</p>
+                    <img src="./img/hoofer1.jpeg" alt="">
+                    <div class="product_details">
+                        <h2>Woofer</h2>
+                        <h4>Ksh 4000</h4>
+                        <h5 onclick="openPopup()">Add To Cart</h5>
+                    </div>
+                </div>
+                <div id="products_data" class="products_data">
+                    <p>See Details</p>
+                    <img src="./img/laptop1.png" alt="">
+                    <div class="product_details">
+                        <h2>Laptop</h2>
+                        <h4>Ksh 25000</h4>
+                        <h5 onclick="openPopup()">Add To Cart</h5>
+                    </div>
+                </div>
+                <div id="products_data" class="products_data">
+                    <p>See Details</p>
+                    <img src="./img/watch1.jpeg" alt="">
+                    <div class="product_details">
+                        <h2>Wrist Watch</h2>
+                        <h4>Ksh 1000</h4>
+                        <h5 onclick="openPopup()">Add To Cart</h5>
+                    </div>
+                </div>
+                <div id="products_data" class="products_data">
+                    <p>See Details</p>
+                    <img src="./img/hoofer1.jpeg" alt="">
+                    <div class="product_details">
+                        <h2>Woofer</h2>
+                        <h4>Ksh 4000</h4>
+                        <h5 onclick="openPopup()">Add To Cart</h5>
+                    </div>
+                </div>
+                <div id="products_data" class="products_data">
+                    <p>See Details</p>
+                    <img src="./img/laptop1.png" alt="">
+                    <div class="product_details">
+                        <h2>Laptop</h2>
+                        <h4>Ksh 25000</h4>
+                        <h5>Add To Cart</h5>
+                    </div>
+                </div>
+                <div id="products_data" class="products_data">
+                    <p onclick="openSdpopup()">See Details</p>
+                    <img src="./img/watch1.jpeg" alt="">
+                    <div class="product_details">
+                        <h2>Wrist Watch</h2>
+                        <h4>Ksh 1000</h4>
+                        <h5>Add To Cart</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="seedtI" class="seedt">
+        <div class="seedt-btn" onclick="closeSdpopup()">&times;</div>
+        <div class="img-sdt">
+            <div class="imgs">
+                <img src="./img/camera.jfif" alt="">
+            </div>
+            <div class="seedt-items">
+                <h6>Name: <span>Earphones</span></h6>
+                <h6>Model: <span>Sumsung</span></h6>
+                <h6>Color: <span>Brown</span></h6>
+                <h6>Rating: <span>Top</span></h6>
+                <h6>Shiping: <span>Ksh.200/10km</span></h6>
+            </div>
+        </div>
+    </div>
+    <!--------About--------->
+    <div id="aboutid" class="about-data">
+        <div class="devde">
+            <div class="developer-profile">
+                <h1>Developer</h1>
+                <img src="./img/gidi.jpg" alt="">
+                <div class="developer-details">
+                    <h4>Gideon Kirui</h4>
+                    <h4>Student - University of Embu</h4>
+                    <h4>Bsc Information Technology</h4>
+                    <h4>Interested in Programming</h4>
+                    <h4 class="last-strok">Kenyan</h4>
+                </div>
+            </div>
+            <div class="detailed-elaboration">
+                <h4>More about G-Shop</h4>
+                <p>
+                    G-Shop is an E-commerce website developed by Gideon Kirui as a class
+                    assignment that was submitted for marking to his lecturer(Consolata Gakii) - A lecturer
+                    at the university of Embu school of pure and applied sciences, department of computing information 
+                    technology. The Name "G-Shop" is abriviated after the developers name Gideon's Shop. This website is 
+                    thus a pure work of Gideon. Since this is it's early stage of developement, Gideon looks forward to advance this website to a production level where 
+                    it can work efficiently just as anyother E-commerce website.
+                </p>
+                <div class="brief-contact">
+                    <h5>Email: gideonkirui675@gmail.com</h5>
+                    <h6>Call: 0742454156</h6>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content">
+            <p>All Rights Reserved</p>
+            <p>G-Shop&copy;2022</p>
+            <p>Feedback</p>
+        </div>
+    </div>
+    <!-----javascript-------->
+    <script src="./js/sho.js"></script>
+</body>
+</html>
